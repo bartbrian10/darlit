@@ -2,6 +2,7 @@ import React from 'react';
 
 function CreateAccountFormComponent({updateState, submitForm, currentState}) {
 return(
+    <div>
 <form onSubmit={submitForm}>
     <h1>Create Account</h1>
 
@@ -28,6 +29,7 @@ return(
     <span>Already Have An Account?<button>log in</button></span>
 
   </form>
+    </div>
 
 );
 }
