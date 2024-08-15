@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CreateAccountForm from "../components/CreateAccountForm";
+import { Stack } from "@mui/material";
 
 function CreateAccountPage() {
   const [formState, setFormState] = useState({});
@@ -25,13 +26,13 @@ function CreateAccountPage() {
   }
 
   return (
-    <div>
+    <Stack sx={{ height: "100vh" }} alignItems="center" justifyContent="center">
       <CreateAccountForm
         submitForm={handleSubmit}
         updateState={handleChange}
         currentState={formState}
       />
-    </div>
+    </Stack>
   );
 }
 

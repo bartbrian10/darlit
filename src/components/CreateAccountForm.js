@@ -1,85 +1,80 @@
 import React from "react";
+import {
+  TextField,
+  Stack,
+  Typography,
+  Grid,
+  Card,
+  Avatar,
+  Button,
+} from "@mui/material";
 
 function CreateAccountForm({ updateState, submitForm, currentState }) {
   return (
     <div>
       <form onSubmit={submitForm}>
-        <h1>Create Account</h1>
+        <Stack direction="column" spacing={1}>
+          <Stack direction="row" justifyContent="center">
+            <Avatar
+              src="https://media.istockphoto.com/id/1294455829/vector/vector-illustration-nice-colorful-threedimensional-symbol-with-three-parts.jpg?s=2048x2048&w=is&k=20&c=or-Se99cEkJcvxSgV57JPuT12nPk0JX8ZNq80Yf40DM="
+              sx={{ width: 100, height: 100, background: "green" }}
+            />
+          </Stack>
 
-        <label for="email">Email: </label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value={currentState.email}
-          onChange={updateState}
-        />
-        <br />
-        <br />
+          <Typography
+            sx={{ display: "flex", justifyContent: "center" }}
+            variant="h6"
+          >
+            CREATE ACCOUNT
+          </Typography>
 
-        <label for="phoneNumber">Phone Number: </label>
-        <input
-          type="number"
-          name="phoneNumber"
-          id="phoneNumber"
-          value={currentState.phoneNumber}
-          onChange={updateState}
-        />
-        <br />
-        <br />
+          <TextField label="Email" variant="standard" />
+          <Stack spacing={3} direction="row">
+            <TextField label="First name" variant="standard" />
+            <TextField label="Last name" variant="standard" />
+          </Stack>
 
-        <label for="firstName">First Name: </label>
-        <input
-          type="text"
-          name="firstName"
-          id="firstName"
-          value={currentState.firstName}
-          onChange={updateState}
-        />
-        <br />
-        <br />
+          <TextField label="phone number" variant="standard" />
 
-        <label for="lastName">Last Name: </label>
-        <input
-          type="text"
-          name="lastName"
-          id="lastName"
-          value={currentState.lastName}
-          onChange={updateState}
-        />
-        <br />
-        <br />
+          <TextField label="password" variant="standard" />
+          <TextField label="confirm password" variant="standard" />
 
-        <label for="password">Password: </label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          value={currentState.password}
-          onChange={updateState}
-        />
-        <br />
-        <br />
+          <TextField label="Email" variant="standard" />
 
-        <label for="confirmPassword">Confirm Password: </label>
-        <input
-          type="password"
-          name="confirmPassword"
-          id="confirmPassword"
-          value={currentState.confirmPassword}
-          onChange={updateState}
-        />
-        <br />
-        <br />
-
-        <input type="submit" value="submit" />
-        <br />
-        <br />
-
-        <span>
-          Already Have An Account?<button>log in</button>
-        </span>
+          <Stack justifyContent="space-between" spacing={2} direction="row">
+            <Typography
+              sx={{ display: "flex", alignItems: "center" }}
+              variant="subtitle2"
+            >
+              Already Have An Account?
+            </Typography>
+            <Button variant="outlined">LOGIN</Button>
+          </Stack>
+        </Stack>
       </form>
+
+      {/* <Grid container spacing={1}>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
+          <Card sx={{ background: "yellow" }}>
+            <Typography>yesss</Typography>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
+          <Card sx={{ background: "yellow" }}>
+            <Typography>yesss</Typography>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
+          <Card sx={{ background: "yellow" }}>
+            <Typography>yesss</Typography>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
+          <Card sx={{ background: "yellow" }}>
+            <Typography>yesss</Typography>
+          </Card>
+        </Grid>
+      </Grid> */}
     </div>
   );
 }
