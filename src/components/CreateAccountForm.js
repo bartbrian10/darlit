@@ -1,86 +1,66 @@
 import React from "react";
+import {
+  TextField,
+  Stack,
+  Typography,
+  Grid,
+  Card,
+  Avatar,
+  Button,
+} from "@mui/material";
 
 function CreateAccountForm({ updateState, submitForm, currentState }) {
   return (
-    <div>
+
       <form onSubmit={submitForm}>
-        <h1>Create Account</h1>
+        <Stack  spacing={1} justifyContent='center' alignItems='center'>
 
-        <label for="email">Email: </label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value={currentState.email}
-          onChange={updateState}
-        />
-        <br />
-        <br />
+            <Avatar
+              src="https://media.istockphoto.com/id/1294455829/vector/vector-illustration-nice-colorful-threedimensional-symbol-with-three-parts.jpg?s=2048x2048&w=is&k=20&c=or-Se99cEkJcvxSgV57JPuT12nPk0JX8ZNq80Yf40DM="
 
-        <label for="phoneNumber">Phone Number: </label>
-        <input
-          type="number"
-          name="phoneNumber"
-          id="phoneNumber"
-          value={currentState.phoneNumber}
-          onChange={updateState}
-        />
-        <br />
-        <br />
+            />
 
-        <label for="firstName">First Name: </label>
-        <input
-          type="text"
-          name="firstName"
-          id="firstName"
-          value={currentState.firstName}
-          onChange={updateState}
-        />
-        <br />
-        <br />
 
-        <label for="lastName">Last Name: </label>
-        <input
-          type="text"
-          name="lastName"
-          id="lastName"
-          value={currentState.lastName}
-          onChange={updateState}
-        />
-        <br />
-        <br />
+            <Typography
 
-        <label for="password">Password: </label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          value={currentState.password}
-          onChange={updateState}
-        />
-        <br />
-        <br />
+            variant="h6"
+            >
+            CREATE ACCOUNT
+            </Typography>
 
-        <label for="confirmPassword">Confirm Password: </label>
-        <input
-          type="password"
-          name="confirmPassword"
-          id="confirmPassword"
-          value={currentState.confirmPassword}
-          onChange={updateState}
-        />
-        <br />
-        <br />
 
-        <input type="submit" value="submit" />
-        <br />
-        <br />
+            <TextField label="First name" variant="standard" value={currentState.firstName} onChange={updateState}  name='firstName'/>
 
-        <span>
-          Already Have An Account?<button>log in</button>
-        </span>
+
+            <TextField label="Last name" variant="standard" value={currentState.lastName} onChange={updateState}  name='lastName'/>
+
+
+            <TextField label="Email" variant="standard" value={currentState.email} onChange={updateState}  name='email'/>
+
+
+            <TextField label="phone number" variant="standard" value={currentState.phoneNumber} onChange={updateState}  name='phoneNumber'/>
+
+
+            <TextField label="password" variant="standard" value={currentState.password} onChange={updateState}  name='password'/>
+
+
+            <TextField label="confirm password" variant="standard" value={currentState.confirmPassword} onChange={updateState}  name='confirmPassword'/>
+
+            <Button variant='contained' type='submit'>Sign Up</Button>
+
+
+            <Typography
+
+              variant="subtitle2"
+            >
+              Already Have An Account?
+            </Typography>
+
+
+            <Button>Log In</Button>
+          </Stack>
       </form>
-    </div>
+
   );
 }
 
