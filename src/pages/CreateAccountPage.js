@@ -40,7 +40,7 @@ function CreateAccountPage() {
 
   return (
 <div>
-      <CreateAccountForm
+      <CreateAccountForm 
         submitForm={handleSubmit}
         updateState={handleChange}
         currentState={formState}

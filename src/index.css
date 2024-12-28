@@ -1,6 +1,6 @@
-body {
+html,body {
   margin: 0;
-  padding: 0;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -8,7 +8,227 @@ body {
   -moz-osx-font-smoothing: grayscale;
   }
 
+#root {
+  display: grid;
+  grid-template-rows: 95px auto 125px;
+  height: 100%;
+  width: 100%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header {
+background: #A6AFB4;
+/*background: red;*/
+/*transition: height 1.5s linear;*/
+}
+
+main {
+background: #A6AFB4;
+/*background: green;*/
+/*overflow-y: auto;*/
+/*margin: 0;*/
+padding: 6% 0;
+display: flex;
+justify-content: space-evenly;
+/*flex-wrap: wrap;*/
+}
+
+h1 {
+font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+color: white;
+/*width: 120px;*/
+/*flex-basis: 200px;*/
+}
+
+footer {
+background: #A6AFB4;
+/*background: blue;*/
+}
+
+.navbar {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+/*background: #A6AFB4;*/
+height: 3rem;
+transition: height 2s ease-out;
+}
+
+.transitionNavbar {
+height: 4rem;
+}
+
+img {
+height: 30px;
+border-radius: 4em;
+margin-top: 1%;
+margin-right: 2%;
+margin-bottom: 1%;
+}
+
+img:hover {
+cursor: pointer;
+background: #ffffff;
+}
+
+@keyframes extendPanel {
+from {height: 0em;}
+to   {height: 10em;}
+}
+
+.profilepanel {
+position: absolute;
+display: flex;
+flex-direction: column;
+align-items: center;
+top: 1.4em;
+right: 3.2em;
+background: #76999a;
+width: 7em;
+height: 0em;
+border-radius: 0.1em;
+transition: height 2s ease-out;
+animation: extendPanel 140ms ease-in forwards;
+}
+
+.profilepanel p:hover {
+cursor: pointer;
+color: #ffffff;
+}
+
+.MajorPanelLayout {
+display: flex;
+flex-direction: column;
+/*background: green;*/
+/*flex-wrap: wrap;*/
+/*padding: 5%;*/
+align-items: center;
+width: 50%;
+flex-wrap: wrap;
+}
+
+.formLayout {
+color: white;
+display: flex;
+flex-direction: column;
+background: hsl(74deg 2.88% 22.09%);
+/*hsl(74deg 2.88% 22.09%)*/
+/*padding: 1em;*/
+/*background: yellow;*/
+width: 85%;
+/*flex-wrap: wrap;*/
+/*border-radius: 1%;*/
+}
+
+.formLayout input:hover {
+cursor: pointer;
+}
+
+.formItems {
+/*background: red;*/
+/*background: hsl(74deg 2.88% 22.09%);*/
+display: flex;
+flex-direction: column;
+margin: 1% 0;
+height: 150px;
+padding: 0 2em;
+justify-content: space-around;
+}
+
+input[type=text], input[type=number]{
+border-style:none;
+border-bottom: 0.2em solid #41adb4;
+background-color: hsl(74deg 2.88% 22.09%);
+}
+
+input[type=text]:hover, input[type=number]:hover{
+border-bottom: 0.2em solid white;
+}
+
+input[type=submit]{
+width: 40%;
+margin: 1em 10em;
+}
+
+label {
+/*background: pink;*/
+}
+
+input {
+/*background: purple;*/
+}
+
+/*a {
+color: black;
+}*/
+
+.MajorPanelLayout .items:hover {
+cursor: pointer;
+}
+
+.items {
+background: hsl(74deg 2.88% 22.09%);
+margin: 1% 0;
+border-radius: 4%;
+/*border: solid;*/
+width: 85%;
+height: 300px;
+}
+
+.items:hover {
+transform: translate(-10px,-10px);
+box-shadow: 5px 10px;
+}
+
+/*.sectionLayoutMinor p:hover {
+cursor: pointer;
+color: white;
+}*/
+
+.sectionLayoutMinor {
+display: flex;
+align-items: center;
+flex-direction: column;
+position: sticky;
+top: 12%;
+width: 25%;
+height: 19em;
+/*margin: 1rem;*/
+/*background: yellow;*/
+border: solid;
+}
+
+.layoutMinorDiv {
+
+width: 100%;
+display: flex;
+justify-content: center;
+
+}
+
+#present:hover {
+cursor: pointer;
+}
+
+#addPlace:hover {
+cursor: pointer;
+}
+
+a {
+text-decoration: none;
+color: black;
+}
+
+.activeNavLink {
+/*display: block;*/
+color: white;
+/*background: hsl(74deg 2.88% 22.09%);*/
+}
+
+/*.deactiveNavLink {
+
+}*/
